@@ -1,12 +1,15 @@
 #AudioCloud
-test from aaduru
 
 ##Description
 - Users can search for audio files. Users can also upload and play music on the website.
 
 ##Functionality & MVP
 - User authentication
+  ![image of login](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/Log in.png)
+  ![image of signup](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/sign up.png)
 - Audio files (Create and Read only)
+  ![image of homepage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/homepage.png)
+  ![image of showpage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/showpage.png)
 - Progress bar for audio playback
 - Search for audio file
 - Design Docs
