@@ -36,3 +36,21 @@
 - Creating enough seed data to demo the website and ensure the server’s running statu that has no 500 error
 
 ##Implementation Timeline
+
+Day 1: Get started on the infrastructure of the Django framework, following this guide from seedstars. By the end of the day, we will have:
+- A completed REST framework inside a AudioCloud folder
+- A completed routers
+- A completed authentication with demo account
+Day 2: Setup the Audio file backend. Create the homepage for storing all the audio files. By the end of the day, we will have:
+- An homepage that host some audio files on it
+- The audio files includes a cover picture and playable documents
+Day 3: Have a Audio file upload feature. By the end of the day:
+- User will be able to upload the audio file through Cloudinary
+- The upload page will be set as a modal
+Day 4: Implement the progress bar on each audio file, By the end of the day:
+- Each audio will be player
+- User can locate the any part on the music track by clicking the progress bar
+
+Day 5: Create the search filter for the audio files. By the end of the day:
+- The search bar will be shown at the index page
+- User will be able to search the audio files by title
