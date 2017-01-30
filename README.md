@@ -5,11 +5,12 @@
 
 ##Functionality & MVP
 - User authentication
-  ![image of login](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/Log in.png)
-  ![image of signup](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/sign up.png)
+  - ![image of login](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/Log in.png)
+  - ![image of signup](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/sign up.png)
+
 - Audio files (Create and Read only)
-  ![image of homepage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/homepage.png)
-  ![image of showpage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/showpage.png)
+  - ![image of homepage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/homepage.png)
+  - ![image of showpage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/showpage.png)
 - Progress bar for audio playback
 - Search for audio file
 - Design Docs
