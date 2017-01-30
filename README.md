@@ -1,63 +1,61 @@
-#AudioCloud
+# AudioCloud
 
-##Description
+## Description
 - Users can search for audio files. Users can also upload and play music on the website.
 
-##Functionality & MVP
+## Functionality & MVP
 - User authentication
-  - ![image of login](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/Log in.png)
-  - ![image of signup](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/sign up.png)
-
 - Audio files (Create and Read only)
-  - ![image of homepage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/homepage.png)
-  - ![image of showpage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/showpage.png)
-- Progress bar for audio playback
 - Search for audio file
-- Design Docs
-- Wireframes
 
-##Group Members & Work Breakdown
+#### Bonus
+- Progress bar for audio playback
+- Demo account
+
+## Docs
+
+[Wiresframes](./docs/wireframes)
+
+## Group Members & Work Breakdown
 - Our group consists of three members, Joel Isai Alvarado, Ujwala Aaduru, and Zidian Lyu.
 
-###Joel's primary responsibilities will be:
+### Joel's primary responsibilities will be:
 - Research and understand Django REST framework
 - Setup database tables with accurate column naming
 - User authentication to ensure user can successfully signup, login and logout
-- Audio file progress bar that can locate any specific part of the audio
 - CSS Styling with attractive and smooth UX design and colorful page
 
-###Ujwala's primary responsibilities will be:
+### Ujwala's primary responsibilities will be:
 - Research and understand Django REST framework
-- Initialize framework with routers’ construction
-- Audio file creation with upload function and button
+- Initialize framework with router construction
+- Audio file creation with upload function
 - Home page that shows all the audio albums from the database
 - CSS Styling with attractive and smooth UX design and colorful page
 
-###Zidian's primary responsibilities will be:
+### Zidian's primary responsibilities will be:
 - Research and understand Django REST framework
-- Setup GitHub repo and make sure each teammate fork the directory repo
+- Setup GitHub repo and make sure each teammate has collaborator access to repo
 - Audio file show page which contains a cover picture and audio file
 - Search function can filter the albums’ titles correctly
-- Creating enough seed data to demo the website and ensure the server’s running statu that has no 500 error
+- Creating enough seed data to demo the website
 
-##Implementation Timeline
+## Implementation Timeline
 
-Day 1: Get started on the infrastructure of the Django framework, following this guide from seedstars. By the end of the day, we will have:
-- A completed REST framework inside a AudioCloud folder
-- A completed routers
-- A completed authentication with demo account
+Day 1: Get started on the infrastructure of the Django framework, following this guide from [seedstars](https://github.com/Seedstars/django-react-redux-base). By the end of the day, we will have:
+- A completed REST framework inside an AudioCloud folder
+- Completed routers
+- Completed authentication
 
-Day 2: Setup the Audio file backend. Create the homepage for storing all the audio files. By the end of the day, we will have:
-- An homepage that host some audio files on it
-- The audio files includes a cover picture and playable documents
+Day 2: Setup the audio file backend. Create the homepage for storing all the audio files. By the end of the day, we will have:
+- A homepage that hosts some audio files on it
+- Homepage includes a cover picture of each audio file
 
-Day 3: Have a Audio file upload feature. By the end of the day:
-- User will be able to upload the audio file through Cloudinary
-- The upload page will be set as a modal
+Day 3: By the end of the day:
+- Show page for each audio file with playable button
 
-Day 4: Implement the progress bar on each audio file, By the end of the day:
-- Each audio will be player
-- User can locate the any part on the music track by clicking the progress bar
+Day 4: Have a audio file upload feature:
+- User will be able to upload the audio file through a form
+- Setup Cloudinary for user uploads
 
 Day 5: Create the search filter for the audio files. By the end of the day:
 - The search bar will be shown at the index page
