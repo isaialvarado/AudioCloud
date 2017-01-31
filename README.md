@@ -39,7 +39,6 @@
 [schema]: docs/schema.md
 
 ## Group Members & Work Breakdown
-- Our group consists of three members, Joel Isai Alvarado, Ujwala Aaduru, and Zidian Lyu.
 
 ### Joel's primary responsibilities will be:
 - Research and understand Django REST framework
