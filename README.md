@@ -4,13 +4,18 @@
 - Users can search for audio files. Users can also upload and play music on the website.
 
 ## Functionality & MVP
-- User authentication
+- Guest demo account
 - Audio files (Create and Read only)
 - Search for audio file
 
+## Technology
+- backend: Python Django(there is no view on it)
+- database: postgreSQL
+- frontend: React/ Redux(pages will be displayed on React)
+
 #### Bonus
 - Progress bar for audio playback
-- Demo account
+- Guest authentication
 
 ## Docs
 
@@ -22,7 +27,7 @@
 ### Joel's primary responsibilities will be:
 - Research and understand Django REST framework
 - Setup database tables with accurate column naming
-- User authentication to ensure user can successfully signup, login and logout
+- Guest demo account to ensure user can successfully signup, login and logout
 - CSS Styling with attractive and smooth UX design and colorful page
 
 ### Ujwala's primary responsibilities will be:
@@ -44,7 +49,7 @@
 Day 1: Get started on the infrastructure of the Django framework, following this guide from [seedstars](https://github.com/Seedstars/django-react-redux-base). By the end of the day, we will have:
 - A completed REST framework inside an AudioCloud folder
 - Completed routers
-- Completed authentication
+- Completed demo account
 
 Day 2: Setup the audio file backend. Create the homepage for storing all the audio files. By the end of the day, we will have:
 - A homepage that hosts some audio files on it
