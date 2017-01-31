@@ -3,10 +3,17 @@
 ## Description
 - Users can search for audio files. Users can also upload and play music on the website.
 
+## Team Members
+- Joel Alvarado
+- Ujwala Aaduru
+- Zidian Lyu
+
 ## Functionality & MVP
+- Hosting on Heroku
 - Guest demo account
 - Audio files (Create and Read only)
 - Search for audio file
+- Production Read Me
 
 ## Technology
 - backend: Python Django(there is no view on it)
@@ -19,7 +26,17 @@
 
 ## Docs
 
-[Wiresframes](./docs/wireframes)
+* [Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
+
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
 ## Group Members & Work Breakdown
 - Our group consists of three members, Joel Isai Alvarado, Ujwala Aaduru, and Zidian Lyu.
