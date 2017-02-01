@@ -1,0 +1,9 @@
+{% if latest %}
+    <ul>
+    {% for question in latest%}
+        <li><a href="/audio/{{ id }}/">{{ track.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tracks are available.</p>
+{% endif %}

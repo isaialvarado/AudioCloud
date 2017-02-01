@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5q00ykyz(#q8&y-ss7#z34s1l3fc*9rj$%41$7md%vh57@2f1('
+SECRET_KEY = 'c!x!fjhn)8(ann$^5rr^15cqtb1-b30etybleah7mp+4twpzde'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,17 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'audio.apps.AudioConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Third party apps
-    'rest_framework',
-    'rest_framework.authtoken',
-    # Internal apps
-    'board',
 ]
 
 MIDDLEWARE = [
@@ -80,10 +76,10 @@ WSGI_APPLICATION = 'AudioCloud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': get_env_variable('DATABASE_NAME'),
-        'USER': get_env_variable('DATABASE_USER'),
-        'PASSWORD': get_env_variable('DATABASE_PASSWORD'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'audiocloud',
+        'USER': 'admincloud',
+        'PASSWORD': 'password',
         'HOST': '',
         'PORT': '',
     }
@@ -108,13 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminUser',
-    ],
-    'PAGE_SIZE': 10
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
