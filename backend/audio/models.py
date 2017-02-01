@@ -2,8 +2,10 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+
 # Create your models here.
 from django.contrib.auth.models import User
+from useraccounts import models as account_models
 
 class Track(models.Model):
     title = models.CharField(max_length=255,null=False)
@@ -11,7 +13,7 @@ class Track(models.Model):
     track_url = models.CharField(max_length=500,null=False)
     image_url = models.CharField(max_length=500,null=False)
     artist = models.CharField(max_length=255,null=False)
-    user_id = models.ForeignKey(User,on_delete=models.CASCADE,null=False)
+    user_id = models.ForeignKey(account_models.User,on_delete=models.CASCADE,null=False)
 
     class Meta:
         ordering = ["title"]
