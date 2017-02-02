@@ -21,6 +21,10 @@ import codecs
 
 from .models import Track
 
+def index(request):
+    print("Pass Index")
+    return render(request, 'index.html')
+
 class TrackDataView(GenericAPIView, CreateModelMixin):
     print("TrackDataView")
     authentication_classes = (JSONWebTokenAuthentication,)
@@ -34,6 +38,7 @@ class TrackDataView(GenericAPIView, CreateModelMixin):
         queryset = self.get_queryset()
         serializer = TrackSerializer(queryset, many=True)
         return Response({"track": serializer.data}, content_type="JSON")
+
 
 
 

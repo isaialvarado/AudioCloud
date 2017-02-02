@@ -1,3 +1,10 @@
+venv
+staticfiles
+bundle.js
+bundle.js.map
+.DS_Store
+.env
+
 # IDEs
 .project
 .pydevproject
@@ -34,6 +41,13 @@ coverage/
 .prospector.yml
 .coveragerc
 
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
 
 cloudinary_options.js
 
