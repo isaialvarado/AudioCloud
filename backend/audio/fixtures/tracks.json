@@ -1,0 +1,60 @@
+[
+ {
+   "pk": "857710c7-8288-4073-aaff-e442d8af3810",
+   "model": "useraccounts.User",
+   "fields": {
+     "first_name": "John",
+     "last_name": "Lennon",
+     "email": "name.name@name.com",
+     "gender": "M"
+   }
+ },
+ {
+   "pk": "1",
+   "model": "audio.track",
+   "fields": {
+     "title": "title1",
+     "artist": "artist1",
+     "image_url": "image1",
+     "track_url": "track1",
+     "description": "decp1",
+     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+   }
+ },
+ {
+   "pk": "2",
+   "model": "audio.track",
+   "fields": {
+     "title": "title1",
+     "artist": "artist1",
+     "image_url": "image1",
+     "track_url": "track1",
+     "description": "decp1",
+     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+   }
+ },
+ {
+   "pk": "3",
+   "model": "audio.track",
+   "fields": {
+     "title": "title1",
+     "artist": "artist1",
+     "image_url": "image1",
+     "track_url": "track1",
+     "description": "decp1",
+     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+   }
+ },
+ {
+   "pk": "4",
+   "model": "audio.track",
+   "fields": {
+     "title": "title1",
+     "artist": "artist1",
+     "image_url": "image1",
+     "track_url": "track1",
+     "description": "decp1",
+     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+   }
+ }
+]
