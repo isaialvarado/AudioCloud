@@ -30,8 +30,8 @@ class TracksIndex extends React.Component {
 
     const tracks = [];
     for(let i = 0; i < 20; i++){
-      let track = {track: {id: i, title: "test"}}
-      tracks.push(<TracksIndexItem track={track}/>)
+      let track = {track: {pk: i, title: "test"}};
+      tracks.push(<TracksIndexItem key={track.pk} track={track}/>);
     }
 
     let searchResultsText;

@@ -20,15 +20,3 @@ class Track(models.Model):
 
     def __str__(self):
         return self.title
-
-    # def __str__(self):
-    #     return self.description
-
-    # def __str__(self):
-    #     return self.track_url
-
-    def __str__(self):
-        return self.image_url
-
-    # def __str__(self):
-    #     return self.artist

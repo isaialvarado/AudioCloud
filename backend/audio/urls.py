@@ -11,8 +11,7 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     # url(r'^$', views.TrackDataView.as_view(), name='tracks_data'),
-    url(r'^$', views.index),
-    url(r'^api/tracks$', views.TrackDataView.get),
+    url(r'^$', views.tracks),
     url(r'^(?P<track_id>[0-9]+)/$', views.TrackView.as_view(), name='detail'),
     # url(r'^(?P<track_id>[0-9]+)/createtrack/$', views.CreateTrack.as_view(), name='create_track'),
 ]

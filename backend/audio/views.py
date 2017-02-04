@@ -21,9 +21,10 @@ import codecs
 
 from .models import Track
 
-def index(request):
-    print("Pass Index")
-    return render(request, 'index.html')
+def tracks(request):
+    tracks = Track.objects.all()
+    data = serializers.serialize("json", tracks)
+    return HttpResponse(data, content_type='application/json')
 
 class TrackDataView(GenericAPIView, CreateModelMixin):
     print("TrackDataView")
