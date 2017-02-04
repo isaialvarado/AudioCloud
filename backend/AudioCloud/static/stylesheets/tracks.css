@@ -1,0 +1,35 @@
+.all-tracks{
+  text-align: center;
+}
+
+.tracks-index{
+  display: inline-block;
+}
+
+.tracks-index-all{
+  display: flex;
+  flex-direction: column;
+  margin: 0 7px;
+}
+.tracks-index img{
+  height:222px;
+  border: 1px solid lightgrey;
+  border-radius: 24px;
+  margin: 7px 0;
+  opacity: 1;
+  transition: opacity 0.9s;
+}
+.tracks-index img:hover{
+  cursor: pointer;
+  opacity: 0.3;
+  background: rgba(0,0,0,.5);
+  transition: all 0.7s;
+}
+.tracks-index img:active{
+  transform: translateY(2px);
+}
+
+.tracks-index audio{
+  width: 250px;
+  height: 30px;
+}

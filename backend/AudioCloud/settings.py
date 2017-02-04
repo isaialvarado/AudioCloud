@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'django_seed',
     'webpack_loader'
+    # 'sass_processor',
 ]
 
 MIDDLEWARE = [

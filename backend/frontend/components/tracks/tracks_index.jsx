@@ -24,9 +24,15 @@ class TracksIndex extends React.Component {
   }
 
   render () {
-    const tracks = this.props.tracks.map(track => (
-      <TracksIndexItem track={track} key={track.id} />
-    ));
+    // const tracks = this.props.tracks.map(track => (
+    //   <TracksIndexItem track={track} key={track.id} />
+    // ));
+
+    const tracks = [];
+    for(let i = 0; i < 20; i++){
+      let track = {track: {id: i, title: "test"}}
+      tracks.push(<TracksIndexItem track={track}/>)
+    }
 
     let searchResultsText;
     if (this.props.location.pathname === '/search') {
@@ -42,8 +48,8 @@ class TracksIndex extends React.Component {
     return (
       <div>
         <SearchContainer currentUser={this.props.currentUserId}/>
-        <h1>{searchResultsText}</h1>
-        {tracks}
+        <h1 className="search-result-text">{searchResultsText}</h1>
+        <div className="all-tracks">{tracks}</div>
       </div>
     );
   }

@@ -42,7 +42,12 @@ module.exports = {
                     //specify that we will be dealing with React code
                     presets: ['es2015', 'react']
                 }
-            }
+            },
+
+            {
+              test: /\.scss$/,
+              loaders: ["style-loader", "css-loader", "sass-loader"]
+            },
         ]
     },
     devtool: 'source-map',

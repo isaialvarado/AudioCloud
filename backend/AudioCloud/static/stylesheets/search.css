@@ -1,0 +1,22 @@
+.search-container{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-family: 'Orbitron';
+}
+
+.search-result-text{
+  text-align: center;
+  font-family: 'Raleway';
+}
+
+.search-submit{
+  /*font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  background: red;*/
+}
+
+.search-submit:hover{
+  cursor: pointer;
+}
