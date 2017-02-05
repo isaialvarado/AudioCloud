@@ -4,7 +4,8 @@
 /*contrast blue color: #0071e6*/
 /*black them color: #383b37*/
 .homepage{
-  background-image: url("http://res.cloudinary.com/dby3dvlvb/image/upload/v1486260827/Blurred_Background_HD_Mobile_Wallpaper23_cucebd.png")
+  background-color: #6a6d68;
+  /*background-image: url("http://res.cloudinary.com/dby3dvlvb/image/upload/v1486260827/Blurred_Background_HD_Mobile_Wallpaper23_cucebd.png")*/
 }
 
 .nav-container{
