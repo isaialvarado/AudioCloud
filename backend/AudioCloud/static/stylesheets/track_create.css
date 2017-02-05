@@ -22,6 +22,10 @@
   border-radius: 5px;
 }
 
+.track-create-image{
+  display: flex;
+  flex-direction: column;
+}
 .track-create-image img{
   border-radius: 8px;
   margin-top: 6px;
@@ -35,7 +39,7 @@
 }
 
 .track-create-audio audio{
-  margin-top: 8px; 
+  margin-top: 8px;
 }
 
 .track-create-form textarea{

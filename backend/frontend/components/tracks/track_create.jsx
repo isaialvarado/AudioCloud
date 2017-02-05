@@ -85,7 +85,8 @@ class TrackCreate extends React.Component {
               type="text"
               value={this.state.title}
               onChange={this.updateTrackState('title')}
-              placeholder={"  Enter title"}>
+              placeholder={"  Enter title"}
+              required>
             </input>
 
             <h4>Artist</h4>
@@ -93,7 +94,8 @@ class TrackCreate extends React.Component {
               type="text"
               value={this.state.location}
               onChange={this.updateTrackState('artist')}
-              placeholder={"  Enter Artist"}>
+              placeholder={"  Enter Artist"}
+              required>
             </input>
           </div>
 
@@ -102,7 +104,8 @@ class TrackCreate extends React.Component {
             <div className="track-create-image">
               <input
                 type="file"
-                onChange={this.updateImageFile}>
+                onChange={this.updateImageFile}
+                required>
               </input>
 
               <img
@@ -116,7 +119,8 @@ class TrackCreate extends React.Component {
             <div className="track-create-audio">
               <input
                 type="file"
-                onChange={this.updateAudioFile}>
+                onChange={this.updateAudioFile}
+                required>
               </input>
 
               <audio
@@ -132,7 +136,8 @@ class TrackCreate extends React.Component {
             <textarea
               value={this.state.description}
               placeholder={ " please describe the track "}
-              onChange={this.updateTrackState('description')}>
+              onChange={this.updateTrackState('description')}
+              required>
             </textarea>
           </span>
         </form>
