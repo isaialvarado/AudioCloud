@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 
 class TrackCreate extends React.Component {
+  // debugger;
   constructor(props){
     super(props);
     this.state = {
@@ -71,15 +72,15 @@ class TrackCreate extends React.Component {
   trackEls() {
     return (
       <div>
-        <header>
+        <header className="track-create-detail">
           <h3>
             Track Details
           </h3>
         </header>
 
-        <form>
+        <form className="track-create-form">
           <div>
-            <label>Title</label>
+            <h4>Title</h4>
             <input
               type="text"
               value={this.state.title}
@@ -87,7 +88,7 @@ class TrackCreate extends React.Component {
               placeholder={"  Enter title"}>
             </input>
 
-            <label>Artist</label>
+            <h4>Artist</h4>
             <input
               type="text"
               value={this.state.location}
@@ -96,9 +97,9 @@ class TrackCreate extends React.Component {
             </input>
           </div>
 
-          <label>Cover Image</label>
+          <h4>Cover Image</h4>
           <span>
-            <div>
+            <div className="track-create-image">
               <input
                 type="file"
                 onChange={this.updateImageFile}>
@@ -110,9 +111,9 @@ class TrackCreate extends React.Component {
             </div>
           </span>
 
-          <label>Audio</label>
+          <h4>Audio</h4>
           <span>
-            <div>
+            <div className="track-create-audio">
               <input
                 type="file"
                 onChange={this.updateAudioFile}>
@@ -126,7 +127,7 @@ class TrackCreate extends React.Component {
           </span>
 
 
-          <label>Description</label>
+          <h4>Description</h4>
           <span>
             <textarea
               value={this.state.description}
@@ -143,13 +144,16 @@ class TrackCreate extends React.Component {
   render(){
     const formFieldsEls = this.trackEls();
     const errors = [];
-    this.props.errors.forEach((error, idx) => {
-      errors.push(<li key={idx}>{error}</li>);
-    });
+    // debugger;
+    // if (this.props.errors){
+    //   this.props.errors.forEach((error, idx) => {
+    //     errors.push(<li key={idx}>{error}</li>);
+    //   });
+    // }
 
     return(
-      <div>
-        <header>
+      <div className="track-create">
+        <header className="track-create-header">
           <h2>
             Create New Track
           </h2>
@@ -157,7 +161,7 @@ class TrackCreate extends React.Component {
 
         {formFieldsEls}
 
-        <footer>
+        <footer className="track-create-footer">
           <br/>
           <button
             onClick={this.handleSubmit}>

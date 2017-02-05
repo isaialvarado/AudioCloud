@@ -4,9 +4,9 @@ import { createTrack } from '../../actions/tracks_actions';
 import TrackCreate from './track_create';
 
 const mapStateToProps = state => {
+  // debugger;
   return{
-    track: state.track.track,
-    errors: state.track.errors
+    errors: state.errors
   }
 };
 

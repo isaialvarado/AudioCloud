@@ -22,8 +22,8 @@ const Root = ({ store }) => {
         <Route path='/' component={App}>
           <IndexRoute component={TracksIndexContainer} />
           <Route path='search' component={TracksIndexContainer} />
+          <Route path='new-track' component={TrackCreateContainer}/>
           <Route path=':trackId' component={TrackDetailContainer} />
-          <Route path='new-track' component={ TrackCreateContainer }/>
         </Route>
       </Router>
     </Provider>
