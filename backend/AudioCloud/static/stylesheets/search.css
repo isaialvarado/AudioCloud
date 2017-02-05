@@ -8,15 +8,18 @@
 .search-result-text{
   text-align: center;
   font-family: 'Raleway';
+  color: white;
 }
 
 .search-submit{
-  /*font-size: 20px;
-  border-radius: 5px;
-  color: white;
-  background: red;*/
+  font-family: 'Orbitron';
+  font-size: 15px;
+  opacity: 1;
+  transition: opacity 0.6s;
 }
 
 .search-submit:hover{
   cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.6s;
 }

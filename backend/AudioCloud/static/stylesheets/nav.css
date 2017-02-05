@@ -1,0 +1,31 @@
+/*deep dark blue color: #4c6380*/
+/*contrast color: #80694c*/
+/*orange color: #e67500*/
+/*contrast blue color: #0071e6*/
+/*black them color: #383b37*/
+.homepage{
+  background-image: url("http://res.cloudinary.com/dby3dvlvb/image/upload/v1486260827/Blurred_Background_HD_Mobile_Wallpaper23_cucebd.png")
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: #383b37;
+}
+
+.nav-right{
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-button a{
+  font-family: 'Orbitron';
+  color: white;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.nav-button a:hover{
+  opacity: 0.5;
+  transition: opacity 0.7s;
+}

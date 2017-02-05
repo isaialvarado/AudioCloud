@@ -11,8 +11,9 @@ class TracksIndexItem extends React.Component {
       <div className="tracks-index" key={this.props.track.pk}>
         <div className="tracks-index-all" onClick={() => this.props.router.push(`/${this.props.track.pk}`)}>
           <img className="tracks-index-img" src='https://res.cloudinary.com/dby3dvlvb/image/upload/v1484935666/e1_qptjz0.png'/>
-          <audio controls preload="auto" className="tracks-index-audio" src='http://res.cloudinary.com/dby3dvlvb/video/upload/v1486229455/Elfen_Lied_vq9dx2.mp3'/>
-        </div>
+          <h2>Title</h2>
+          <label>By Artist</label>
+      </div>
       </div>
     );
   }

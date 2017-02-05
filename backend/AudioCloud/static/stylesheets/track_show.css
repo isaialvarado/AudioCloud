@@ -1,11 +1,14 @@
 .track-show{
   text-align: center;
+  color: white;
 }
 
 .track-show-title{
   font-family: 'Orbitron';
   text-transform: capitalize;
   font-size: 32px;
+  margin: 0;
+  padding-top: 18px;
 }
 .track-show-artist{
   font-family: 'Raleway';
@@ -29,5 +32,6 @@
   font-family: 'Raleway';
   text-align: left;
   border-top: 1px solid lightgrey;
-  padding: 31px 64px;
+  padding: 30px 60px 100px 60px;
+  margin: 11px 110px;
 }

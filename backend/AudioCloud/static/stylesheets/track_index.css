@@ -7,9 +7,10 @@
 }
 
 .tracks-index-all{
+  color: white;
   display: flex;
   flex-direction: column;
-  margin: 0 7px;
+  margin: 2px 7px;
 }
 .tracks-index img{
   height:222px;
@@ -29,7 +30,13 @@
   transform: translateY(2px);
 }
 
-.tracks-index audio{
-  width: 250px;
-  height: 30px;
+.tracks-index h2{
+  /*color: blue;*/
+  font-family: 'Orbitron';
+  font-size: 28px;
+  margin: 2px 0;
+}
+
+.tracks-index label{
+  font-family: 'Raleway';
 }
