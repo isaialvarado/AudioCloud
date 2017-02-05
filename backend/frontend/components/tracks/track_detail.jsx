@@ -20,13 +20,15 @@ class TrackDetail extends React.Component {
     const track = this.props.trackDetail;
 
     return (
-      <div id='track-detail'>
-        <h1 id='track-detail-title'>{track.title}</h1>
-        <h1 id='track-detail-artist'>{track.artist}</h1>
-        <div id='track-detail-play'>
-          <img id='track-detail-image' src={track.imageUrl} />
+      <div className="track-show" id='track-detail'>
+        <h1 className="track-show-title" id='track-detail-title'>{track.title}</h1>
+        <h2 className="track-show-artist" id='track-detail-artist'>{track.artist}</h2>
+        <div className="track-show-media" id='track-detail-play'>
+          <img id='track-detail-image' src={track.image_url} />
+          <div> </div>
+          <audio controls preload="auto" src={track.track_url}/>
         </div>
-        <p id='track-detail-description'>{track.description}</p>
+        <p className="track-show-description" id='track-detail-description'>{track.description}</p>
       </div>
     );
   }

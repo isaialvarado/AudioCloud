@@ -4,6 +4,7 @@ import App from './app';
 import { Router, Route, IndexRoute, hashHistory, onEnter } from 'react-router';
 import TracksIndexContainer from './tracks/tracks_index_container';
 import TrackDetailContainer from './tracks/track_detail_container';
+import TrackCreateContainer from './tracks/track_create_container';
 // import TrackFormContainer from './tracks/track_form_container';
 // <Route path='new-track' component={TrackFormContainer} onEnter={_redirectIfLoggedOut} />
 // <Route path='edit-track/:trackId' component={TrackFormContainer} onEnter={_redirectIfLoggedOut} />
@@ -22,6 +23,7 @@ const Root = ({ store }) => {
           <IndexRoute component={TracksIndexContainer} />
           <Route path='search' component={TracksIndexContainer} />
           <Route path=':trackId' component={TrackDetailContainer} />
+          <Route path='new-track' component={ TrackCreateContainer }/>
         </Route>
       </Router>
     </Provider>
