@@ -1,1 +1,1 @@
-web: gunicorn backend.AudioCloud.wsgi --log-file -
+web: gunicorn AudioCloud.wsgi --log-file -
