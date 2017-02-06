@@ -34,7 +34,8 @@
 .tracks-index h2{
   /*color: blue;*/
   font-family: 'Orbitron';
-  font-size: 28px;
+  font-size: 21px;
+  max-width: 222px;
   margin: 2px 0;
 }
 

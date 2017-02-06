@@ -1,9 +1,44 @@
-.login_form {
+.login-form {
   height: 1000px;
-  width: 1000px;
 }
-.login_box  {
-  height: 400;
-  width: 400;
-  margin: 50;
+
+.login-box{
+  color: white;
+  text-align: center;
+  margin: 67px 163px;
+  padding: 60px 40px;
+  border-radius: 11px;
+  border: 1px solid white;
+  position: relative;
+}
+
+.login-info{
+  font-family: 'Raleway';
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.login-password{
+  font-family: 'Raleway';
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.login-submit{
+  font-family: 'Orbitron';
+  font-size: 18px;
+  padding: 10px 9px 6px 9px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.7s;
+  margin-top: 11px;
+}
+
+.login-submit:hover{
+  opacity: 0.4;
+  transition: opacity 0.7s;
+  cursor: pointer;
 }

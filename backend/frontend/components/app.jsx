@@ -7,19 +7,22 @@ import TrackCreateContainer from './tracks/track_create_container';
 import auth from './auth';
 
 const App = ({ children }) => (
-  <div>
+  <nav className="navbar">
     <header>
-      <div>
-        <div>
-          <Link to="/">Home </Link>
+      <div className="nav-container">
+        <div className="nav-left">
+          <ul className="nav-button">
+            <Link to="/">Home </Link>
+          </ul>
         </div>
-        <div>
-          <Greeting />
-        </div>
+
+        <Greeting />
       </div>
     </header>
-    {children}
-  </div>
+    <div className="main-body">
+      {children}
+    </div>
+  </nav>
 );
 
 export default App;

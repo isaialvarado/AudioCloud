@@ -18,11 +18,8 @@ const Root = ({ store }) => {
     }
   };
   const _requireAuth = (nextState, replace) => {
-    // debugger;
     if (localStorage.logged_in === "false") {
       replace('/login');
-      // console.log(auth.loggedIn());
-      // console.log("in root");
     }
   };
 
