@@ -18,6 +18,11 @@ Below the navigator bar, there are detail information for all the tracks from th
 On the track show page, user can seem the cover picture and play the tracks.
 ![image of showpage](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/_showpage.png)
 
+### Track Create page
+
+Authenticated user can create new track
+![image of track create page](https://github.com/zidianlyu/AudioCloud/blob/master/docs/wireframes/_track_create_page.png)
+
 ### Search Filter
 
 On the Index page, user can search the track name by typing in keywords.
