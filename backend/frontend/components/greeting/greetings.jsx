@@ -10,7 +10,6 @@ const sessionLinks = () => (
 const personalGreeting = () => (
 	<hgroup className="header-group">
     <h2 className="header-name">Hi, User!</h2>
-    <button className="log_out_button" >Log Out</button>
       <Link to="/new-track">
         Create Track
       </Link>

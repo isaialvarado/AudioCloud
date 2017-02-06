@@ -70,7 +70,7 @@ class TrackCreate extends React.Component {
     e.preventDefault();
     const track = Object.assign(
       this.state,
-      { user_id: "857710c7-8288-4073-aaff-e442d8af3810"}
+      { user_id: "1"}
     );
     this.props.createTrack(track).then(
       (res) => {

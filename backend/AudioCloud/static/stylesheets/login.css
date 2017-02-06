@@ -1,0 +1,9 @@
+.login_form {
+  height: 1000px;
+  width: 1000px;
+}
+.login_box  {
+  height: 400;
+  width: 400;
+  margin: 50;
+}

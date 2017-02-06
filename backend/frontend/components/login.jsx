@@ -14,6 +14,7 @@ class Login extends React.Component {
           document.loginform.user.value="admin";
           document.loginform.pass.value="password123";
           this.setState({username:"admin",password: "password123", logged_in: true});
+          setTimeout(function(){ }, 30);
           this.props.router.push('/');
           auth.login();
           // console.log('inside submit');
@@ -29,20 +30,22 @@ class Login extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit.bind(this)} name="loginform">
-              <div>
+            <form onSubmit={this.handleSubmit.bind(this)} name="loginform" className="login_form">
+              <div className="login_box">
                 <label>
                   <input id="user" type="text"
                     placeholder="username"
                     ref="username"
                     onChange={this.update('username')} />
                 </label>
+                <br />
                 <label>
                   <input id="pass" type="password"
                     placeholder="password"
                     ref="pass"
                     onChange={this.update('password')} />
                 </label>
+                <br />
                 <input type="submit" value="DEMO"/>
               </div>
             </form>
