@@ -13,10 +13,10 @@
    "pk": "1",
    "model": "audio.track",
    "fields": {
-     "title": "title1",
-     "artist": "artist1",
-     "image_url": "image1",
-     "track_url": "track1",
+     "title": "Fishing",
+     "artist": "Sam",
+     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935668/e37_qlaccl.jpg",
+     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486229455/Elfen_Lied_vq9dx2.mp3",
      "description": "decp1",
      "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
    }
@@ -25,10 +25,10 @@
    "pk": "2",
    "model": "audio.track",
    "fields": {
-     "title": "title1",
-     "artist": "artist1",
-     "image_url": "image1",
-     "track_url": "track1",
+     "title": "Sea",
+     "artist": "Aaduru",
+     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935669/e36_w7iepu.jpg",
+     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486346557/lkqzfsrpxegakymivfib.mp3",
      "description": "decp1",
      "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
    }
@@ -37,10 +37,10 @@
    "pk": "3",
    "model": "audio.track",
    "fields": {
-     "title": "title1",
-     "artist": "artist1",
-     "image_url": "image1",
-     "track_url": "track1",
+     "title": "Yogo",
+     "artist": "Hellen",
+     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935667/e30_mahkhf.jpg",
+     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486229455/Elfen_Lied_vq9dx2.mp3",
      "description": "decp1",
      "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
    }
@@ -49,10 +49,10 @@
    "pk": "4",
    "model": "audio.track",
    "fields": {
-     "title": "title1",
-     "artist": "artist1",
-     "image_url": "image1",
-     "track_url": "track1",
+     "title": "Rythem",
+     "artist": "Sandra",
+     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935667/e41_wky1mf.jpg",
+     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486346557/lkqzfsrpxegakymivfib.mp3",
      "description": "decp1",
      "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
    }

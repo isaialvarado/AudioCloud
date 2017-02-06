@@ -74,7 +74,13 @@ class TrackCreate extends React.Component {
     );
     this.props.createTrack(track).then(
       (res) => {
-        this.props.router.push(`/${res.track[0].pk}`);
+        let num;
+        if(res.track){
+          num = res.track[0].pk;
+        } else {
+          num = "";
+        }
+        this.props.router.push(`/${num}`);
       }
     );
   }
