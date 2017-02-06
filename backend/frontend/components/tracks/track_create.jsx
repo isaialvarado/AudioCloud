@@ -113,8 +113,10 @@ class TrackCreate extends React.Component {
           <span>
             <div className="track-create-image">
               <input
-                type="file"
-                onChange={this.updateImageFile}
+                className="track-create-cloudinary-button"
+                type="submit"
+                value="Add Image"
+                onClick={this.updateImageFile}
                 required>
               </input>
 
@@ -128,8 +130,10 @@ class TrackCreate extends React.Component {
           <span>
             <div className="track-create-audio">
               <input
-                type="file"
-                onChange={this.updateAudioFile}
+                className="track-create-cloudinary-button"
+                type="submit"
+                value="Add Audio"
+                onClick={this.updateAudioFile}
                 required>
               </input>
 
