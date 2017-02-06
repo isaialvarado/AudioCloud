@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import CLOUDINARY_ACCESS from './cloudinary_access';
 
 class TrackCreate extends React.Component {
   // debugger;
@@ -28,29 +29,41 @@ class TrackCreate extends React.Component {
 
 
   updateImageFile(e){
-    let file = e.currentTarget.files[0];
-    let fileReader = new FileReader();
-    fileReader.onloadend = function(){
-      this.setState({
-        image_url: fileReader.result
-      });
-    }.bind(this);
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: 'dby3dvlvb',
+        upload_preset: 'audiocloud',
+        theme: 'minimal',
+      },
+      (errors, imageInfo) => {
+        if(errors === null){
+          let cloud_url = imageInfo[0].secure_url;
+          this.setState({
+            image_url: cloud_url
+          });
+        }
+      }
+    );
   }
 
   updateAudioFile(e){
-    let file = e.currentTarget.files[0];
-    let fileReader = new FileReader();
-    fileReader.onloadend = function(){
-      this.setState({
-        track_url: fileReader.result
-      });
-    }.bind(this);
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: 'dby3dvlvb',
+        upload_preset: 'audiocloud',
+        theme: 'minimal',
+      },
+      (errors, imageInfo) => {
+        if(errors === null){
+          let cloud_url = imageInfo[0].secure_url;
+          this.setState({
+            track_url: cloud_url
+          });
+        }
+      }
+    );
   }
 
   handleSubmit(e){
