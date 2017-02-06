@@ -1,60 +1,123 @@
 [
  {
-   "pk": "857710c7-8288-4073-aaff-e442d8af3810",
-   "model": "useraccounts.User",
-   "fields": {
-     "first_name": "John",
-     "last_name": "Lennon",
-     "email": "name.name@name.com",
-     "gender": "M"
-   }
- },
- {
    "pk": "1",
    "model": "audio.track",
    "fields": {
-     "title": "Fishing",
-     "artist": "Sam",
-     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935668/e37_qlaccl.jpg",
-     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486229455/Elfen_Lied_vq9dx2.mp3",
-     "description": "decp1",
-     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+     "title": "Save Me, San Francisco",
+     "artist": "Patrick Monahan",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486316782/track1_mzs66l.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486220655/Train_-_Save_Me_San_Francisco_clt3ug.mp3",
+     "description": "Save Me, San Francisco is the title of California rock band Train's fifth studio album and the first of two albums recorded as a three-piece.",
+     "user_id": "1"
    }
  },
  {
    "pk": "2",
    "model": "audio.track",
    "fields": {
-     "title": "Sea",
-     "artist": "Aaduru",
-     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935669/e36_w7iepu.jpg",
-     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486346557/lkqzfsrpxegakymivfib.mp3",
-     "description": "decp1",
-     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+     "title": "Calling All Angels",
+     "artist": "Patrick Monahan",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486317056/track2_m5pur1.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486220639/Train_-_Calling_All_Angels_goir2r.mp3",
+     "description": "'Calling All Angels' is the title of a 2003 song by the rock band Train. It was included on the band's third studio album, My Private Nation, and produced by Brendan O'Brien",
+     "user_id": "1"
    }
  },
  {
    "pk": "3",
    "model": "audio.track",
    "fields": {
-     "title": "Yogo",
-     "artist": "Hellen",
-     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935667/e30_mahkhf.jpg",
-     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486229455/Elfen_Lied_vq9dx2.mp3",
-     "description": "decp1",
-     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+     "title": "Slide",
+     "artist": "John Rzeznik",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486317252/track3_sretyt.png",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486155336/Goo_Goo_Dolls_-_Slide_Official_Music_Video_xfjkfx.mp3",
+     "description": "'Slide' is a song recorded by American alternative rock group The Goo Goo Dolls.",
+     "user_id": "1"
    }
  },
  {
    "pk": "4",
    "model": "audio.track",
    "fields": {
-     "title": "Rythem",
-     "artist": "Sandra",
-     "image_url": "http://res.cloudinary.com/dby3dvlvb/image/upload/v1484935667/e41_wky1mf.jpg",
-     "track_url": "http://res.cloudinary.com/dby3dvlvb/video/upload/v1486346557/lkqzfsrpxegakymivfib.mp3",
-     "description": "decp1",
-     "user_id": "857710c7-8288-4073-aaff-e442d8af3810"
+     "title": "So Alive",
+     "artist": "John Rzeznik",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486317524/track4_ctumbg.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486155353/Goo_Goo_Dolls_-_So_Alive_Official_Music_Video_qrqvw8.mp3",
+     "description": "Boxes is the eleventh studio album by American rock band Goo Goo Dolls. It was released on May 6, 2016, through Warner Bros. Records.",
+     "user_id": "1"
+   }
+ },
+ {
+   "pk": "5",
+   "model": "audio.track",
+   "fields": {
+     "title": "Name",
+     "artist": "John Rzeznik",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486319254/track5_bn77rf.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486155339/Goo_Goo_Dolls_-_-Name-_Official_Video_ulekvc.mp3",
+     "description": "'Name' is an alternative rock song by the American rock band Goo Goo Dolls. It was released in September 1995 as the third single from the album A Boy Named Goo.",
+     "user_id": "1"
+   }
+ },
+ {
+   "pk": "6",
+   "model": "audio.track",
+   "fields": {
+     "title": "Iris",
+     "artist": "John Rzeznik",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486319590/track6_w7ab2n.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486155279/Goo_Goo_Dolls_-_-Iris-_Official_Music_Video_phzwu6.mp3",
+     "description": "'Iris' is a song by American alternative rock band Goo Goo Dolls. Originally written for the soundtrack of 1998 film City of Angels, the song was later included on the band's sixth album Dizzy Up the Girl.",
+     "user_id": "1"
+   }
+ },
+ {
+   "pk": "7",
+   "model": "audio.track",
+   "fields": {
+     "title": "Cherry Wine",
+     "artist": "Hozier",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486320011/track7_hiwfn3.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486220057/Hozier_-_Cherry_Wine_k4paeo.mp3",
+     "description": "'Cherry Wine' is a song by Hozier released in February 2016 as the final single from the 2014 album Hozier.",
+     "user_id": "1"
+   }
+ },
+ {
+   "pk": "8",
+   "model": "audio.track",
+   "fields": {
+     "title": "Work Song",
+     "artist": "Hozier",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486320229/track8_hvkei0.png",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486220116/Hozier_-_Work_Song_zoo0an.mp3",
+     "description": "'Work Song' is a song written and performed by Irish musician Hozier. It was released as the fourth single from his debut studio album Hozier (2014). It was released as the album's fifth single to United States rock radio on 16 March 2015.",
+     "user_id": "1"
+   }
+ },
+ {
+   "pk": "9",
+   "model": "audio.track",
+   "fields": {
+     "title": "Take Me to Church",
+     "artist": "Hozier",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486320384/track9_fyk1ad.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486220103/Hozier_-_Take_Me_To_Church_ij61rv.mp3",
+     "description": "'Take Me to Church' is a song by Irish musician Hozier for his debut extended play (EP) Take Me to Church (2013), as well as his self-titled debut album (2014).",
+     "user_id": "1"
+   }
+ },
+ {
+   "pk": "10",
+   "model": "audio.track",
+   "fields": {
+     "title": "Jackie and Wilson",
+     "artist": "Hozier",
+     "image_url": "https://res.cloudinary.com/dzmqqopi9/image/upload/v1486320565/track10_qqxaja.jpg",
+     "track_url": "https://res.cloudinary.com/dzmqqopi9/video/upload/v1486220114/Hozier_-_Jackie_And_Wilson_mkdtj6.mp3",
+     "description": "'Jackie and Wilson' was released as the sixth single from the self-titled album, 'Hozier', on 29 September 2015.",
+     "user_id": "1"
    }
  }
+
 ]

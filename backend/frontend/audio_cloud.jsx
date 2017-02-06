@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createTrack = createTrack;
   window.store = store;
   Modal.setAppElement(document.body);
+  localStorage.setItem("logged_in", "false");
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

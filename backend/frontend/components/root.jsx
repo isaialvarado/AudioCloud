@@ -8,11 +8,21 @@ import TrackCreateContainer from './tracks/track_create_container';
 // import TrackFormContainer from './tracks/track_form_container';
 // <Route path='new-track' component={TrackFormContainer} onEnter={_redirectIfLoggedOut} />
 // <Route path='edit-track/:trackId' component={TrackFormContainer} onEnter={_redirectIfLoggedOut} />
+import auth from './auth';
+import Login from './login';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedOut = (nextState, replace) => {
     if (store.getState().session.currentUser === null) {
       replace('/');
+    }
+  };
+  const _requireAuth = (nextState, replace) => {
+    // debugger;
+    if (localStorage.logged_in === "false") {
+      replace('/login');
+      // console.log(auth.loggedIn());
+      // console.log("in root");
     }
   };
 
@@ -21,9 +31,10 @@ const Root = ({ store }) => {
       <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
         <Route path='/' component={App}>
           <IndexRoute component={TracksIndexContainer} />
-          <Route path='search' component={TracksIndexContainer} />
-          <Route path='new-track' component={TrackCreateContainer}/>
-          <Route path=':trackId' component={TrackDetailContainer} />
+          <Route path='login' component={Login}/>
+          <Route path='search' component={TracksIndexContainer} onEnter={_requireAuth} />
+          <Route path='new-track' component={TrackCreateContainer} onEnter={_requireAuth} />
+          <Route path=':trackId' component={TrackDetailContainer} onEnter={_requireAuth} />
         </Route>
       </Router>
     </Provider>

@@ -34,12 +34,18 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'audio',
     'useraccounts',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.admin',
+
     'rest_framework',
     'django_extensions',
     'rest_framework_jwt',
+    'rest_framework.authtoken',
     'django_seed',
     'webpack_loader'
     # 'sass_processor',
@@ -51,6 +57,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -123,9 +130,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = 'useraccounts.User'
-
-ACCOUNT_ACTIVATION_DAYS = 7  # days
+# AUTH_USER_MODEL = 'useraccounts.User'
+#
+# ACCOUNT_ACTIVATION_DAYS = 7  # days
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -148,23 +155,11 @@ WEBPACK_LOADER = {
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-    ),
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20,
-    'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser',
-    ),
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication'
+    )
 }
-
 # ############ JWT AUTHENTICATION ##################
 
 JWT_AUTH = {
