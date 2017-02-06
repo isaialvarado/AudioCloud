@@ -16,7 +16,7 @@ class TracksIndex extends React.Component {
     const newUser = (this.props.currentUserId !== newProps.currentUserId);
 
     if (oldPath !== '/search' && newPath === '/search') {
-      this.props.fetchSearchResults({ keywords: newProps.search });
+      this.props.fetchSearchResults(newProps.search);
     }
     if ((oldPath === '/search' && newPath === '/') || (newUser && newPath === '/')) {
       this.props.fetchTracks();

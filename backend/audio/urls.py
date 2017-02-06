@@ -12,7 +12,7 @@ router = routers.DefaultRouter()
 urlpatterns = [
     url(r'^$', views.tracks),
     url(r'^(?P<track_id>[0-9]+)/$', views.track),
-    url(r'^search/(?P<keywords>[\w ?!,]+)/$', views.search),
+    url(r'^search/(?P<keywords>[\w ?!,]+)?/?$', views.search),
     url(r'^create$', views.create),
 ]
 
