@@ -8,7 +8,7 @@ from django.template import loader
 from django.core.urlresolvers import reverse
 from django.views import generic
 from rest_framework.generics import GenericAPIView
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+# from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.response import Response
 from rest_framework import status, viewsets
 from rest_framework.mixins import CreateModelMixin
