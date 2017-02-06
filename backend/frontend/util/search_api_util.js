@@ -1,7 +1,6 @@
 export const fetchSearchResults = searchData => (
   $.ajax({
     method: 'GET',
-    url: 'api/search',
-    data: { searchData }
+    url: `api/tracks/search/${searchData}`
   })
 );

@@ -30,16 +30,16 @@ class TracksIndex extends React.Component {
 
     const tracks = [];
     for(let i = 0; i < 20; i++){
-      let track = {track: {pk: i, title: "test"}};
+      let track = {pk: (i + 1), title: "test"};
       tracks.push(<TracksIndexItem key={track.pk} track={track}/>);
     }
 
     let searchResultsText;
     if (this.props.location.pathname === '/search') {
       if (this.props.search) {
-        searchResultsText = "'" + this.props.search + "' search results";
+        searchResultsText = "Showing results for '" + this.props.search + "'";
       } else {
-        searchResultsText = 'Search Results';
+        searchResultsText = "Showing results for ''";
       }
     } else {
       searchResultsText = null;

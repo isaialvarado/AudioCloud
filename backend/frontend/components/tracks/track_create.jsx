@@ -6,13 +6,13 @@ class TrackCreate extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title:"",
-      artist:"",
-      image_url:"",
-      audio_url:"",
-      description:"",
-      user_id: 1
+      title: "",
+      artist: "",
+      image_url: "",
+      track_url: "",
+      description: ""
     };
+
     this.trackEls = this.trackEls.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateTrackState = this.updateTrackState.bind(this);
@@ -45,7 +45,7 @@ class TrackCreate extends React.Component {
     let fileReader = new FileReader();
     fileReader.onloadend = function(){
       this.setState({
-        audio_url: fileReader.result
+        track_url: fileReader.result
       });
     }.bind(this);
     if (file) {
@@ -55,17 +55,14 @@ class TrackCreate extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    let formData = new FormData();
-    formData.append("track[title]", this.state.title);
-    formData.append("track[artist]", this.state.artist);
-    formData.append("track[image_url]", this.state.image_url);
-    formData.append("track[audio_url]", this.state.audio_url);
-    formData.append("track[description]", this.state.description);
-    formData.append("track[user_id]", 1);
-
-    const track = Object.assign({}, this.state);
-    this.props.createTrack(formData).then(
-      (track) => this.props.router.push('/')
+    const track = Object.assign(
+      this.state,
+      { user_id: "857710c7-8288-4073-aaff-e442d8af3810"}
+    );
+    this.props.createTrack(track).then(
+      (res) => {
+        this.props.router.push('/');
+      }
     );
   }
 
@@ -78,7 +75,7 @@ class TrackCreate extends React.Component {
           </h3>
         </header>
 
-        <form className="track-create-form">
+        <form className="track-create-form" onSubmit={this.handleSubmit}>
           <div>
             <h4>Title</h4>
             <input
@@ -125,7 +122,7 @@ class TrackCreate extends React.Component {
 
               <audio
                 controls preload="auto"
-                src={this.state.audio_url}>
+                src={this.state.track_url}>
               </audio>
             </div>
           </span>
@@ -140,6 +137,11 @@ class TrackCreate extends React.Component {
               required>
             </textarea>
           </span>
+
+          <footer className="track-create-footer">
+            <br/>
+            <input type="submit" />
+          </footer>
         </form>
       </div>
     );
@@ -147,7 +149,7 @@ class TrackCreate extends React.Component {
 
 
   render(){
-    const formFieldsEls = this.trackEls();
+    const form = this.trackEls();
     const errors = [];
     // debugger;
     // if (this.props.errors){
@@ -163,20 +165,7 @@ class TrackCreate extends React.Component {
             Create New Track
           </h2>
         </header>
-
-        {formFieldsEls}
-
-        <footer className="track-create-footer">
-          <br/>
-          <button
-            onClick={this.handleSubmit}>
-            Submit
-          </button>
-
-          <ul>
-            { errors }
-          </ul>
-        </footer>
+        {form}
       </div>
     );
   }

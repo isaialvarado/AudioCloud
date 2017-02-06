@@ -16,7 +16,7 @@ export const trackDetailReducer = (state = _nullTrackDetail, action) => {
   const newState = merge({}, _nullTrackDetail, state);
   switch (action.type) {
     case RECEIVE_TRACK:
-      return action.track;
+      return action.track[0];
     case CLEAR_TRACK_DETAIL:
       return _nullTrackDetail;
     default:

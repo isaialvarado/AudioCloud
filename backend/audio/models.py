@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.forms import ModelForm
 
 # Create your models here.
 from django.contrib.auth.models import User
@@ -20,3 +20,8 @@ class Track(models.Model):
 
     def __str__(self):
         return self.title
+
+class TrackForm(ModelForm):
+    class Meta:
+        model = Track
+        fields = ['title', 'description', 'track_url', 'image_url', 'artist', 'user_id']

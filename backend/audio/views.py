@@ -14,7 +14,8 @@ from rest_framework import status, viewsets
 from rest_framework.mixins import CreateModelMixin
 
 from audio.serializers import TrackSerializer
-from .models import Track
+from django.core import serializers
+from .models import Track, TrackForm
 
 import json
 import codecs
@@ -26,99 +27,24 @@ def tracks(request):
     data = serializers.serialize("json", tracks)
     return HttpResponse(data, content_type='application/json')
 
-class TrackDataView(GenericAPIView, CreateModelMixin):
-    print("TrackDataView")
-    authentication_classes = (JSONWebTokenAuthentication,)
-    serializer_class = TrackSerializer
-    queryset = Track.objects.values_list('title', 'image_url')
+def track(request, track_id):
+    tracks = Track.objects.filter(pk=track_id)
+    data = serializers.serialize("json", tracks)
+    return HttpResponse(data, content_type='application/json')
 
+def search(request, keywords):
+    tracks = Track.objects.filter(title__iregex=r"\y{0}\y".format(str(keywords)))
+    data = serializers.serialize("json", tracks)
+    return HttpResponse(data, content_type='application/json')
 
-
-    def get(self, request):
-        print("TrackDataView get")
-        queryset = self.get_queryset()
-        serializer = TrackSerializer(queryset, many=True)
-        return Response({"track": serializer.data}, content_type="JSON")
-
-
-
-
-class TrackView(GenericAPIView, CreateModelMixin):
-    print("TrackView")
-    authentication_classes = (JSONWebTokenAuthentication,)
-    lookup_url_kwarg = "track_id"
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
-
-    def create(self, request, *args, **kwargs):
-        print("TrackDataView create")
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
-        headers = self.get_success_headers(serializer.data)
-        return Response({"track": serializer.data}, status=status.HTTP_201_CREATED, headers=headers)
-
-    def get(self, request, track_id):
-        track_id = self.kwargs.get(self, lookup_url_kwarg)
-        tracks = Track.objects.filter(track_id=track_id)
-        track_serializer = TrackSerializer(tracks, many=True)
-        return Response({
-            "curr_track": track_serializer.data,
-            "track": track_serializer.data},
-            content_type="JSON"
-        )
-
-    def post(self, request):
-        print("TrackDataView post")
-        data = request.data
-        response = self.create(request)
-        return response
-
-# class CreateTrack(GenericAPIView, CreateModelMixin):
-#     print("CreateTrack")
-#     authentication_classes = (JSONWebTokenAuthentication,)
-#     lookup_url_kwarg = "track_id"
-#
-#     def post(self, request, track_id):
-#         track_id = self.kwargs.get(self.lookup_url_kwarg)
-#         track = Track.objects.filter(id=track_id)
-#
-#         body = request.body
-#         data = json.loads(body.decode("utf-8"))
-#
-#         title = data["title"]
-#         image_url = data["image_url"]
-#
-#         track = {
-#             'title': title,
-#             'image_url': image_url
-#         }
-#
-#         #pass back
-#         track_serializer = TrackSerializer(data=track)
-#
-#         if track_serializer.is_valid():
-#             track_serializer.save()
-#             return Response({"track": track_serializer.data}, content_type="JSON")
-#
-#         return Response(track_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    # def root(request):
-    #     return HttpResponse("Hello, kids")
-    #
-    # def index(request):
-    #     latest = Track.objects.order_by('title')[:5]
-    #     # template = loader.get_template('audio/index.html')
-    #     context = {'latest': latest}
-    #     return render(request, 'audio/index.html', context)
-    #     # return HttpResponse(template.render(context, request))
-    #
-    # def detail(request, id):
-    #     return HttpResponse("You're looking at tracks %s." % id)
-    #
-    # def results(request, id):
-    #     response = "You're looking at the results of tracks %s."
-    #     return HttpResponse(response % id)
-
-# class TrackList(ListView):
-#     model = Track
+def create(request):
+    if request.method == 'POST':
+        track = TrackForm(request.POST)
+        if track.is_valid():
+            new_track = track.save()
+            data = serializers.serialize("json", [new_track, ])
+            return HttpResponse(data, content_type='application/json')
+        else:
+            return HttpResponse(["Unknown Error. Please try again later."], content_type='application/json')
+    else:
+        return HttpResponse({}, content_type='application/json')

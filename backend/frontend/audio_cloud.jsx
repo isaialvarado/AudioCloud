@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
+import { createTrack } from './util/tracks_api_util.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  window.createTrack = createTrack;
   window.store = store;
   Modal.setAppElement(document.body);
   const root = document.getElementById('root');
