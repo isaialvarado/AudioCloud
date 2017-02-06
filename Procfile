@@ -1,1 +1,1 @@
-cd ./backend && web: gunicorn AudioCloud.wsgi --log-file -
+web: gunicorn --pythonpath backend AudioCloud.wsgi 
