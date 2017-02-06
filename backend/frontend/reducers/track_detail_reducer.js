@@ -2,13 +2,15 @@ import { RECEIVE_TRACK, CLEAR_TRACK_DETAIL } from '../actions/tracks_actions';
 import { merge } from 'lodash';
 
 export const _nullTrackDetail = Object.freeze({
-  id: '',
-  title: '',
-  description: '',
-  trackUrl: '',
-  imageUrl: '',
-  artist: '',
-  userId: ''
+  fields: {
+    id: '',
+    title: '',
+    description: '',
+    trackUrl: '',
+    imageUrl: '',
+    artist: '',
+    userId: ''
+  }
 });
 
 export const trackDetailReducer = (state = _nullTrackDetail, action) => {

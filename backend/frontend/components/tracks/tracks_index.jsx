@@ -24,15 +24,15 @@ class TracksIndex extends React.Component {
   }
 
   render () {
-    // const tracks = this.props.tracks.map(track => (
-    //   <TracksIndexItem track={track} key={track.id} />
-    // ));
+    const tracks = this.props.tracks.map(track => (
+      <TracksIndexItem track={track} key={track.pk} />
+    ));
 
-    const tracks = [];
-    for(let i = 0; i < 20; i++){
-      let track = {pk: (i + 1), title: "test"};
-      tracks.push(<TracksIndexItem key={track.pk} track={track}/>);
-    }
+    // const tracks = [];
+    // for(let i = 0; i < 20; i++){
+    //   let track = {pk: (i + 1), title: "test"};
+    //   tracks.push(<TracksIndexItem key={track.pk} track={track}/>);
+    // }
 
     let searchResultsText;
     if (this.props.location.pathname === '/search') {

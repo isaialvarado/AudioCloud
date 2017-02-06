@@ -17,7 +17,7 @@ class TrackDetail extends React.Component {
   }
 
   render() {
-    const track = this.props.trackDetail;
+    const track = this.props.trackDetail.fields;
 
     return (
       <div className="track-show" id='track-detail'>

@@ -10,9 +10,9 @@ class TracksIndexItem extends React.Component {
     return (
       <div className="tracks-index" key={this.props.track.pk}>
         <div className="tracks-index-all" onClick={() => this.props.router.push(`/${this.props.track.pk}`)}>
-          <img className="tracks-index-img" src='https://res.cloudinary.com/dby3dvlvb/image/upload/v1484935666/e1_qptjz0.png'/>
-          <h2>Title</h2>
-          <label>By Artist</label>
+          <img className="tracks-index-img" src={this.props.track.fields.image_url}/>
+          <h2>{this.props.track.fields.title}</h2>
+          <label>By {this.props.track.fields.artist}</label>
       </div>
       </div>
     );
