@@ -17,6 +17,8 @@
   opacity: 1;
   transition: opacity 0.6s;
   border-radius: 4px;
+  font-size: 22px;
+  padding: 7px 7px 5px 6px;
 }
 
 .search-submit:hover{
@@ -28,4 +30,8 @@
 .seach-form {
   margin: 0;
   padding: 0;
+}
+
+.search-form input{
+  font-size: 26px;
 }

@@ -33,7 +33,7 @@ class Search extends React.Component {
   render() {
     return (
       <div className='search-container'>
-        <form className='search-form' onSubmit={this.handleSubmit}>
+        <form className='search-form' onSubmit={this.handleSubmit} height="400">
           <input
             className='search'
             type='search'

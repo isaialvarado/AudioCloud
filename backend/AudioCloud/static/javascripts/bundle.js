@@ -51817,7 +51817,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'app_name' },
+	        { className: 'nav-app-name' },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -51826,7 +51826,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'nav-author' },
 	        _react2.default.createElement(
 	          'h3',
 	          null,
@@ -56836,12 +56836,16 @@
 	      )
 	    ),
 	    _react2.default.createElement(
-	      'button',
-	      { onClick: logout, className: 'logout_button' },
+	      'ul',
+	      { className: 'nav-button' },
 	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/', className: 'logout_link' },
-	        'LogOut'
+	        'button',
+	        { onClick: logout, className: 'nav-logout-button' },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/' },
+	          'LogOut'
+	        )
 	      )
 	    )
 	  );
@@ -57561,7 +57565,7 @@
 	        { className: 'search-container' },
 	        _react2.default.createElement(
 	          'form',
-	          { className: 'search-form', onSubmit: this.handleSubmit },
+	          { className: 'search-form', onSubmit: this.handleSubmit, height: '400' },
 	          _react2.default.createElement('input', {
 	            className: 'search',
 	            type: 'search',

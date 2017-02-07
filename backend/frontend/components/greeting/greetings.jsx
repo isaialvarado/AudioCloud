@@ -25,11 +25,13 @@ const personalGreeting = () => (
         </Link>
       </ul>
 
-      <button onClick={logout} className="logout_button">
-        <Link to="/" className="logout_link">
-          LogOut
-        </Link>
-      </button>
+      <ul className="nav-button">
+        <button onClick={logout} className="nav-logout-button">
+          <Link to="/">
+            LogOut
+          </Link>
+        </button>
+      </ul>
     </div>
 );
 
