@@ -66,8 +66,6 @@
 	
 	var _reactModal2 = _interopRequireDefault(_reactModal);
 	
-	var _tracks_api_util = __webpack_require__(206);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -79,10 +77,9 @@
 	    store = (0, _store2.default)();
 	  }
 	
-	  window.createTrack = _tracks_api_util.createTrack;
-	  window.store = store;
 	  _reactModal2.default.setAppElement(document.body);
-	  localStorage.setItem("logged_in", "false");
+	  // localStorage.setItem("logged_in", "false");
+	  // sessionStorage.setItem("logged_in", "false");
 	  var root = document.getElementById('root');
 	  _reactDom2.default.render(_react2.default.createElement(_root2.default, { store: store }), root);
 	});
@@ -50537,7 +50534,8 @@
 	    }
 	  };
 	  var _requireAuth = function _requireAuth(nextState, replace) {
-	    if (localStorage.logged_in === "false") {
+	    // if (localStorage.logged_in === "false") {
+	    if (sessionStorage.logged_in === "false") {
 	      replace('/login');
 	    }
 	  };
@@ -51816,6 +51814,39 @@
 	          )
 	        ),
 	        _react2.default.createElement(_greetings2.default, null)
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'app_name' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'AUDIOCLOUD'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'This App is designed by :',
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://github.com/isaialvarado' },
+	            ' Joel Isai Alvarado'
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://github.com/aaduru' },
+	            'Ujwala Aaduru'
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://github.com/zidianlyu/' },
+	            'Zidian Lyu'
+	          )
+	        )
 	      )
 	    ),
 	    _react2.default.createElement(
@@ -56764,6 +56795,8 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	// import auth from './auth';
+	
 	var sessionLinks = function sessionLinks() {
 	  return _react2.default.createElement(
 	    'div',
@@ -56778,6 +56811,10 @@
 	      )
 	    )
 	  );
+	};
+	
+	var logout = function logout() {
+	  sessionStorage.setItem("logged_in", "false");
 	};
 	
 	var personalGreeting = function personalGreeting() {
@@ -56797,15 +56834,27 @@
 	        { to: '/new-track' },
 	        'Create Track'
 	      )
+	    ),
+	    _react2.default.createElement(
+	      'button',
+	      { onClick: logout, className: 'logout_button' },
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/', className: 'logout_link' },
+	        'LogOut'
+	      )
 	    )
 	  );
 	};
 	
 	var Greeting = function Greeting() {
-	  return localStorage.logged_in === "false" ? sessionLinks() : personalGreeting();
+	  return (
+	    // localStorage.logged_in === "false" ? sessionLinks() :  personalGreeting()
+	    sessionStorage.logged_in === "false" ? sessionLinks() : personalGreeting()
+	  );
 	};
 	
-	exports.default = Greeting;
+	exports.default = (0, _reactRouter.withRouter)(Greeting);
 
 /***/ },
 /* 289 */
@@ -57143,15 +57192,19 @@
 	module.exports = {
 	
 	  login: function login() {
-	    localStorage.setItem("logged_in", "true");
+	    // localStorage.setItem("logged_in", "true");
+	    sessionStorage.setItem("logged_in", "true");
 	  },
 	
 	  logout: function logout() {
-	    return localStorage.logged_in;
+	    // return localStorage.logged_in;
+	    // sessionStorage.setItem("logged_in", "false");
+	    return sessionStorage.logged_in;
 	  },
 	
 	  loggedIn: function loggedIn() {
-	    return localStorage.logged_in;
+	    // return localStorage.logged_in;
+	    return sessionStorage.logged_in;
 	  }
 	
 	};

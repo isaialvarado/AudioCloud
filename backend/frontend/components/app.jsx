@@ -18,6 +18,17 @@ const App = ({ children }) => (
 
         <Greeting />
       </div>
+      <div className="app_name">
+        <h1>AUDIOCLOUD</h1>
+      </div>
+      <div>
+        <h3>This App is designed by :
+
+          <a href="https://github.com/isaialvarado" > Joel Isai Alvarado</a>
+          <a href="https://github.com/aaduru" >Ujwala Aaduru</a>
+          <a href="https://github.com/zidianlyu/" >Zidian Lyu</a>
+        </h3>
+      </div>
     </header>
     <div className="main-body">
       {children}

@@ -24,3 +24,8 @@
   opacity: 0.4;
   transition: opacity 0.6s;
 }
+
+.seach-form {
+  margin: 0;
+  padding: 0;
+}
