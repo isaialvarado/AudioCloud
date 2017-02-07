@@ -22,13 +22,18 @@
 .track-create-form h4{
   margin: 10px 0 1px 0;
   font-family: 'Raleway';
+  font-size: 24px;
 }
 
 .track-create-form input{
+  height: 27px;
+  width: 168px;
+  font-size: 21px;
   border-radius: 5px;
 }
 
 .track-create-cloudinary-button{
+  padding: 2px 6px 28px 6px;
   width: 80px;
   font-size: 12px;
   font-family: 'Raleway';
@@ -66,6 +71,7 @@
   padding: 5px;
   height: 150px;
   width: 300px;
+  font-size: 21px;
 }
 
 
@@ -82,7 +88,7 @@
 .track-create-footer input[type="submit"]{
   margin: 0;
   font-size: 16px;
-  padding: 8px 8px 5px 8px;
+  padding: 8px 8px 24px 8px;
   border-radius: 6px;
   font-family: 'Orbitron';
 }
