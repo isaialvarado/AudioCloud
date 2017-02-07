@@ -1,5 +1,5 @@
 .track-create{
-  padding: 20px 10px 20px 10px;
+  padding: 0;
   color: white;
 }
 
@@ -11,6 +11,12 @@
 }
 .track-create-detail h3{
   font-family: 'Orbitron';
+  margin: 0;
+  padding: 11px 0;
+}
+
+.track-create-form{
+  padding-left: 14px;
 }
 
 .track-create-form h4{

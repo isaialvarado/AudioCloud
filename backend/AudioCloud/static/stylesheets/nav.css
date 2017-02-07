@@ -26,6 +26,7 @@ header {
 }
 
 .nav-author h3{
+  margin: 0;
   padding-bottom: 17px;
   font-family: 'Raleway';
 }
