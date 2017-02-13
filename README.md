@@ -18,9 +18,7 @@ The application uses Cloudinary services for images and audio files.
 
 * [Design Details][designdetails]
 
-
 [designdetails]: ./docs/README.md
-
 
 ## Features & Implementation
 ### Index page
